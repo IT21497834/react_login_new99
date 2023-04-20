@@ -8,11 +8,9 @@ import { Link } from 'react-router-dom'
 function Registerpage() {
     return (
 
-        <div class="container">
-            <div class="forms">
+         <div class="container">
+           <div class="forms">
                
-
-                {/* <!-- Registration Form --> */}
                 <div class="form signup">
                     <span class="title">Registration</span>
 
@@ -54,7 +52,7 @@ function Registerpage() {
                     </div>
                 </div>
             </div>
-        </div>
+         </div>
 
 
 
