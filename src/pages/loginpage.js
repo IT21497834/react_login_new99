@@ -1,7 +1,21 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
+
 
 function Loginpage() {
+
+
+    let navigate = useNavigate()
+
+   
+    const onSubmit=async (e)=>{
+        e.preventDefault();
+        // await axios.post("http://localhost:8080/user",user)
+        navigate("/testpg")
+    }
+
     return (
 
         <div class="container">
@@ -9,16 +23,17 @@ function Loginpage() {
 
                 <div class="form login">
                     <span class="title">Login</span>
+                    <hr></hr>
 
-                    <form action="#">
+                    <form onSubmit={(e)=>onSubmit(e)}>
                         <div class="input-field">
                             <input type="text" placeholder="Enter your email" required />
-                            <i class="uil uil-envelope icon"></i>
+                            {/* <i class="uil uil-envelope icon"></i> */}
                         </div>
                         <div class="input-field">
                             <input type="password" class="password" placeholder="Enter your password" required />
-                            <i class="uil uil-lock icon"></i>
-                            <i class="uil uil-eye-slash showHidePw"></i>
+                            {/* <i class="uil uil-lock icon"></i> */}
+                            {/* <i class="uil uil-eye-slash showHidePw"></i> */}
                         </div>
 
                         <div class="checkbox-text">
@@ -26,12 +41,17 @@ function Loginpage() {
                                 <input type="checkbox" id="logCheck" />
                                 <label for="logCheck" class="text">Remember me</label>
                             </div>
-
+                            
+                            <div className='FP'>
                             <a href="#" class="text">Forgot password?</a>
+                            </div>
+                            {/* <a href="#" class="text">Forgot password?</a> */}
                         </div>
 
                         <div class="input-field button">
-                            <input type="button" value="Login" />
+                            {/* <input type="button" value="Login" /> */}
+                            <button type="Submit" to="/testpg">Login</button>
+
                         </div>
                     </form>
 
@@ -43,8 +63,10 @@ function Loginpage() {
                     </div>
                 </div>
 
-        </div>
-    </div >
+            </div>
+        </div >
+
+
 
 
     )
