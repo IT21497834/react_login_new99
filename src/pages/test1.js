@@ -1,50 +1,35 @@
-
-import React from 'react'
-import { Link } from 'react-router-dom'
-import axios from 'axios'
-import { useNavigate } from 'react-router-dom'
-
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 function Test1() {
+    const [users, setUsers] = useState([]);
 
-    let navigate = useNavigate()
+    useEffect(() => {
+        loadUsers();
+    }, []);
 
+    const loadUsers = async () => {
 
+            const response = await axios.get('http://localhost:8080/users');
+            setUsers(response.data);
 
-        const onSubmit=async (e)=>{
-            e.preventDefault();
-            
-            // await axios.post("http://localhost:8080/user",user)
-            navigate("/viewpg")
-        }
-
+    };
 
     return (
-
-
-    
-
-        <form onSubmit={(e)=>onSubmit(e)}>
         <div>
 
-            <button type="Submit" to="/viewpg" >view porfile</button>
-
-            {/* <Link className="btn btn-primary mx-2"
-                        to={`/register${user.id}`}>
-                        
-                    View
-             </Link> */}
-       
+            <ul>
+                {users.map(user => (
+                    <li key={user.id}>
+                        <Link to={`/viewpg/${user.id}`}>
+                            <button>{user.id}</button>
+                        </Link>
+                    </li>
+                ))}
+            </ul>
         </div>
-        </form>
-
-
-        // <div class="login-signup">
-            
-        //         <Link id="button-1" className="btn btn-dark btn-outline-primary" to="/register">Sign Up</Link>
-            
-        // </div>
-    )
+    );
 }
 
-export default Test1
+export default Test1;

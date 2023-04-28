@@ -28,6 +28,7 @@ function Registerpage() {
     }
 
     const onSubmit=async (e)=>{
+        alert("Registration Successful")
         e.preventDefault();
         await axios.post("http://localhost:8080/user",user)
         navigate("/")
@@ -36,56 +37,56 @@ function Registerpage() {
 
     return (
 
-         <div class="container">
-           <div class="forms">
+         <div className="container">
+           <div className="forms">
                
-                <div class="form signup">
-                    <span class="title">Registration</span>
+                <div className="form signup">
+                    <span className="title">Registration</span>
                     <hr></hr>
 
                     <form onSubmit={(e)=>onSubmit(e)}>
                        
-                        <div class="input-field">
+                        <div className="input-field">
                             <input type="text" placeholder="Enter your name" required name='name' 
                             value={name}
                             onChange={(e)=>onInputChange(e)}/>
                             {/* <i class="uil uil-user"></i> */}
                         </div>
-                        <div class="input-field">
+                        <div className="input-field">
                             <input type="text" placeholder="Enter your email" required name='email' 
                             value={email}
                             
                             onChange={(e)=>onInputChange(e)} />
                             {/* <i class="uil uil-envelope icon"></i> */}
                         </div>
-                        <div class="input-field">
+                        <div className="input-field">
                             <input type="text" placeholder="Enter your address" required name='address' 
                             value={address}
                             onChange={(e)=>onInputChange(e)}/>
                             {/* <i class="uil uil-location-point icon"></i> */}
                         </div>
-                        <div class="input-field">
+                        <div className="input-field">
                             <input type="text" placeholder="Enter your mobile" required name='mobile' 
                             value={mobile}
                             onChange={(e)=>onInputChange(e)}/>
                             {/* <i class="uil uil-phone icon"></i> */}
                         </div>
-                        <div class="input-field">
-                            <input type="password" class="password" placeholder="Create a password" required  name='password' 
+                        <div className="input-field">
+                            <input type="password" className="password" placeholder="Create a password" required  name='password'
                             value={password}
                             onChange={(e)=>onInputChange(e)}/>
                             {/* <i class="uil uil-lock icon"></i> */}
                         </div>
                         
 
-                        <div class="checkbox-text">
-                            <div class="checkbox-content">
-                                <input type="checkbox" id="termCon" />
-                                <label for="termCon" class="text">I accepted all terms and conditions</label>
+                        <div className="checkbox-text">
+                            <div className="checkbox-content">
+                                <input type="checkbox" id="termCon" required/>
+                                <label for="termCon" className="text">I accepted all terms and conditions</label>
                             </div>
                         </div>
 
-                        <div class="input-field button">
+                        <div className="input-field button">
                             {/* <input type="button" value="Signup" /> */}
                             <button type="submit">SignUp</button>
                         </div>
@@ -93,8 +94,8 @@ function Registerpage() {
                         
                     </form>
 
-                    <div class="login-signup">
-                        <span class="text">Already a member?
+                    <div className="login-signup">
+                        <span className="text">Already a member?
                         <Link id="button-1" className="btn btn-dark btn-outline-primary" to="/">Sign in</Link>
                         </span>
                     </div>

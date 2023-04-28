@@ -24,7 +24,7 @@ function App(){
             <Route exact path="/" element={<Loginpage/>}/>
 
             <Route exact path="/testpg" element={<Test1/>}/>
-            <Route exact path="/viewpg" element={<Viewpage/>}/>
+            <Route exact path="/viewpg/:id" element={<Viewpage/>}/>
 
           </Routes>
         </Router>

@@ -35,7 +35,7 @@ function Viewpage() {
     const onSubmit=async (e)=>{
         e.preventDefault();
         await axios.post("http://localhost:8080/user",user)
-        navigate("/")
+        navigate("/testpg")
     }
 
 
@@ -49,7 +49,7 @@ function Viewpage() {
                     <h2 className='text-center m-4'>User Details</h2>
 
                 <form onSubmit={(e)=>onSubmit(e)}>
-
+                {/*    <form>*/}
                     <div className='card'>
                         <div className='card-header'>
                             Details of user id:{user.id}
