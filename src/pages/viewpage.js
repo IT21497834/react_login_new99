@@ -42,44 +42,77 @@ function Viewpage() {
     return(
 
         
-        <div className='container'>
+        <div className='container98'>
             <div className='row'>
 
                 <div className='col-md-6 offset-md-3 border rounded p-4 mt-2 shadow'>
-                    <h2 className='text-center m-4'>User Details</h2>
+                    <h2 className='text-center m-4'><br/>User Details</h2>
 
                 <form onSubmit={(e)=>onSubmit(e)}>
-                {/*    <form>*/}
+
                     <div className='card'>
                         <div className='card-header'>
-                            Details of user id:{user.id}
+                            <br/>Details of user id:{user.id}
+
+
+                            {/*<table className="table1">*/}
+                            {/*    <thead>*/}
+                            {/*    <tr>*/}
+                            {/*        <th scope="col">#</th>*/}
+                            {/*        <th scope="col">First</th>*/}
+                            {/*        <th scope="col">Last</th>*/}
+                            {/*        <th scope="col">Handle</th>*/}
+                            {/*    </tr>*/}
+                            {/*    </thead>*/}
+                            {/*    <tbody>*/}
+                            {/*    <tr>*/}
+                            {/*        <th scope="row">1</th>*/}
+                            {/*        <td>Mark</td>*/}
+                            {/*        <td>Otto</td>*/}
+                            {/*        <td>@mdo</td>*/}
+                            {/*    </tr>*/}
+                            {/*    <tr>*/}
+                            {/*        <th scope="row">2</th>*/}
+                            {/*        <td>Jacob</td>*/}
+                            {/*        <td>Thornton</td>*/}
+                            {/*        <td>@fat</td>*/}
+                            {/*    </tr>*/}
+                            {/*    <tr>*/}
+                            {/*        <th scope="row">3</th>*/}
+                            {/*        <td colSpan="2">Larry the Bird</td>*/}
+                            {/*        <td>@twitter</td>*/}
+                            {/*    </tr>*/}
+                            {/*    </tbody>*/}
+                            {/*</table>*/}
+
+
                             <ul className = 'list-group list-group-flush'>
 
-                                <li className='list-group-item'>
-                                    <b>Name    : </b>
+                                <li className='list23'>
+                                    <b>Name &ensp;   : &ensp;</b>
                                     {user.name}
                                 </li>
 
 
-                                <li className='list-group-item'>
-                                    <b>Email  :</b>
+                                <li className='list23'>
+                                    <b>Email &emsp; :&ensp;</b>
                                     {user.email}
                                 </li>
 
                                 <li className='list-group-item'>
-                                    <b>Address   :</b>
+                                    <b>Address  &emsp; :&ensp;</b>
                                     {user.address}
                                 </li>
 
 
                                 <li className='list-group-item'>
-                                    <b>Mobile   :</b>
+                                    <b>Mobile  &emsp; :&ensp;</b>
                                     {user.mobile}
                                 </li>
 
 
                                 <li className='list-group-item'>
-                                    <b>Password    :  </b>
+                                    <b>Password &emsp;   : &ensp; </b>
                                     {user.password}
                                 </li>
 
@@ -91,16 +124,16 @@ function Viewpage() {
                     <button className='buttonseperate'>
                         Back to Home
                     </button>
-                    <button>
-                    <Link className="btn btn-outline-primary mx-2"
+
+                    <Link className="linkbutton"
                           to={`/edituser/${user.id}`}
-                    >Edit</Link>
-                    </button>
+                    >Edit Profile</Link>
+
                 </form>
 
                 </div>
             </div>
-        </div>        
+        </div>
 
     )
 }

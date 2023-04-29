@@ -40,20 +40,20 @@ export default function Editpg() {
         setUser(result.data)
     }
     return (
-        <div className='container'>
+        <div className='container99'>
             <div className='row'>
 
                 <div className='col-md-6 offset-md-3 border rounded p-4 mt-2 shadow'>
-                    <h2 className='text-center m-4'>Edit User</h2>
+                    <h2 className='text-center m-4'><br/>Edit User</h2>
 
                     <form onSubmit={(e)=>onSubmit(e)}>
-                        <div className='mb-3'>
+                        <div className='mb-3'><br/>
                             <label htmlFor='Name' className='form-label'>
-                                Name
+                                Name<br/>
                             </label>
                             <input
                                 type={'text'}
-                                className='form-control'
+                                className='form-control99'
                                 placeholder='Enter Your Name'
                                 name='name'
                                 value={name}
@@ -64,11 +64,11 @@ export default function Editpg() {
                         </div>
                         <div className='mb-3'>
                             <label htmlFor='Password' className='form-label'>
-                                Password
+                                <br/>Password<br/>
                             </label>
                             <input
                                 type={'text'}
-                                className='form-control'
+                                className='form-control99'
                                 placeholder='Enter Your Password'
                                 name='password'
                                 value={password}
@@ -79,11 +79,11 @@ export default function Editpg() {
                         </div>
                         <div className='mb-3'>
                             <label htmlFor='Email' className='form-label'>
-                                Email
+                                <br/>Email<br/>
                             </label>
                             <input
                                 type={'text'}
-                                className='form-control'
+                                className='form-control99'
                                 placeholder='Enter Your Email'
                                 name='email'
                                 value={email}
@@ -94,11 +94,11 @@ export default function Editpg() {
 
                         <div className='mb-3'>
                             <label htmlFor='Address' className='form-label'>
-                                Address
+                                <br/>Address<br/>
                             </label>
                             <input
                                 type={'text'}
-                                className='form-control'
+                                className='form-control99'
                                 placeholder='Enter Your Address'
                                 name='address'
                                 value={address}
@@ -109,21 +109,21 @@ export default function Editpg() {
 
                         <div className='mb-3'>
                             <label htmlFor='Mobile' className='form-label'>
-                                Mobile Number
+                                <br/>Mobile Number<br/>
                             </label>
                             <input
                                 type={'text'}
-                                className='form-control'
+                                className='form-control99'
                                 placeholder='Enter Your Mobile Number'
                                 name='mobile'
                                 value={mobile}
                                 onChange={(e)=>onInputChange(e)}
-                            />
+                            /><br/>
 
                         </div>
 
-                        <button type='submit' className='btn btn-outline-primary'>Submit</button>
-                        <Link className='btn btn-outline-danger mx-2' to="/"> Cancel</Link>
+                        <button type='submit' className='buttonseperate'>Submit</button><br/>
+                        <Link className='linkbutton' to="/"> Cancel</Link>
 
                     </form>
                 </div>

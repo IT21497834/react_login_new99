@@ -68,8 +68,8 @@ function Loginpage() {
             <div className="forms">
 
                 <div className="form login">
-                    <span className="title">Login</span>
-                    <hr></hr>
+                    <span className="title"><br/>Login</span>
+
 
                     {/*<form onSubmit={(e)=>onSubmit(e)}>*/}
                         <div className="input-field">

@@ -41,8 +41,8 @@ function Registerpage() {
            <div className="forms">
                
                 <div className="form signup">
-                    <span className="title">Registration</span>
-                    <hr></hr>
+                    <span className="title"><br/>Registration</span>
+
 
                     <form onSubmit={(e)=>onSubmit(e)}>
                        
@@ -96,7 +96,7 @@ function Registerpage() {
 
                     <div className="login-signup">
                         <span className="text">Already a member?
-                        <Link id="button-1" className="btn btn-dark btn-outline-primary" to="/">Sign in</Link>
+                        <Link id="button-1" className="btn btn-dark btn-outline-primary" to="/"><br/>Sign in</Link>
                         </span>
                     </div>
                     
