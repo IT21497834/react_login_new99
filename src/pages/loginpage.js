@@ -41,9 +41,10 @@ function Loginpage() {
                 else if(result.data.authenticated === true)
                 {
                     alert("Login Success");
-
+                    localStorage.setItem("user_id",result.data.user_id)
                     // const userId=response.data.id
                     navigate(`/testpg`);
+
                 }
                 else
                 {

@@ -6,6 +6,7 @@ import Registerpage from './pages/registerpage';
 import Loginpage from './pages/loginpage';
 import Viewpage from './pages/viewpage';
 import Test1 from './pages/test1';
+import Editpg from "./pages/editpg";
 
 
 
@@ -25,6 +26,7 @@ function App(){
 
             <Route exact path="/testpg" element={<Test1/>}/>
             <Route exact path="/viewpg/:id" element={<Viewpage/>}/>
+             <Route exact path="/edituser/:id" element={<Editpg/>}/>
 
           </Routes>
         </Router>

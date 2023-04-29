@@ -56,30 +56,30 @@ function Viewpage() {
                             <ul className = 'list-group list-group-flush'>
 
                                 <li className='list-group-item'>
-                                    <b>Name:</b>
+                                    <b>Name    : </b>
                                     {user.name}
                                 </li>
 
 
                                 <li className='list-group-item'>
-                                    <b>Email:</b>
+                                    <b>Email  :</b>
                                     {user.email}
                                 </li>
 
                                 <li className='list-group-item'>
-                                    <b>Address:</b>
+                                    <b>Address   :</b>
                                     {user.address}
                                 </li>
 
 
                                 <li className='list-group-item'>
-                                    <b>Mobile:</b>
+                                    <b>Mobile   :</b>
                                     {user.mobile}
                                 </li>
 
 
                                 <li className='list-group-item'>
-                                    <b>Password:</b>
+                                    <b>Password    :  </b>
                                     {user.password}
                                 </li>
 
@@ -90,6 +90,11 @@ function Viewpage() {
                     {/* <button className='btn btn-primary my-2' to={'/'}> */}
                     <button className='buttonseperate'>
                         Back to Home
+                    </button>
+                    <button>
+                    <Link className="btn btn-outline-primary mx-2"
+                          to={`/edituser/${user.id}`}
+                    >Edit</Link>
                     </button>
                 </form>
 
