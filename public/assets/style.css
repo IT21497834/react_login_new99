@@ -12,9 +12,9 @@
 
 body{
     height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: block;
+    /*align-items: center;*/
+    /*justify-content: center;*/
     background-image: url(./bg_img3.jpg);
     background-size: cover;
 } 
@@ -29,6 +29,8 @@ body{
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     margin: 0 5px;
+    margin-top: 170px;
+    margin-left: 700px;
 
 }
 
@@ -136,6 +138,7 @@ body{
     border-radius: 10px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     margin: 0 5px;
+
 }
 
 .form-control99{
@@ -167,9 +170,12 @@ body{
     margin-left: 10px;
 }
 
-/*.list23*/
-
-/*}*/
+.list23{
+    color: black;
+    pointer-events: none;
+    list-style: none;
+    margin-left: 10px;
+}
 
 .container98{
     background-color: white;
@@ -178,4 +184,7 @@ body{
     border-radius: 10px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     margin: 0 5px;
+    margin-top: 170px;
+    margin-left: 700px;
+
 }

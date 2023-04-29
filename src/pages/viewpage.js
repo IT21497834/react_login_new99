@@ -99,19 +99,19 @@ function Viewpage() {
                                     {user.email}
                                 </li>
 
-                                <li className='list-group-item'>
+                                <li className='list23'>
                                     <b>Address  &emsp; :&ensp;</b>
                                     {user.address}
                                 </li>
 
-
-                                <li className='list-group-item'>
+                                {/*<li className='list-group-item'>*/}
+                                <li className='list23'>
                                     <b>Mobile  &emsp; :&ensp;</b>
                                     {user.mobile}
                                 </li>
 
 
-                                <li className='list-group-item'>
+                                <li className='list23'>
                                     <b>Password &emsp;   : &ensp; </b>
                                     {user.password}
                                 </li>

@@ -7,6 +7,7 @@ import Loginpage from './pages/loginpage';
 import Viewpage from './pages/viewpage';
 import Test1 from './pages/test1';
 import Editpg from "./pages/editpg";
+import Navbar from "./layerout/navbar";
 
 
 
@@ -18,7 +19,7 @@ function App(){
       <div className="App">
 
         <Router>
-
+            <Navbar/>
           <Routes>
 
             <Route exact path="/register" element={<Registerpage/>}/>

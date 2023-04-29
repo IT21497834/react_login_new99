@@ -40,7 +40,7 @@ function Loginpage() {
                 }
                 else if(result.data.authenticated === true)
                 {
-                    alert("Login Success");
+                    // alert("Login Success");
                     localStorage.setItem("user_id",result.data.user_id)
                     // const userId=response.data.id
                     navigate(`/testpg`);
@@ -112,7 +112,7 @@ function Loginpage() {
 
                         <div className="input-field button">
                             {/* <input type="button" value="Login" /> */}
-                            <button to="/testpg" onClick={login}>Login</button>
+                            <button  onClick={login}>Login</button>
 
                         </div>
                     {/*</form>*/}
