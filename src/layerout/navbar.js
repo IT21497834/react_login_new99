@@ -27,10 +27,10 @@ export default function
                         </a>
 
                         <Link className="nav5" to="/home_room">
-
+                            Room Booking
                         </Link>
 
-                        <Link className="nav6" to="/home_hall">AddBooking</Link>
+                        <Link className="nav6" to="/home_hall">Hotel Booking</Link>
 
                     </div>
                 </div>

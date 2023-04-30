@@ -11,6 +11,8 @@ function Registerpage() {
 
     let navigate = useNavigate()
 
+    const [errors, setErrors] = useState({})
+
     const [user,setUser]=useState ({
         name:"",
         email:"",
@@ -34,6 +36,67 @@ function Registerpage() {
         navigate("/")
     }
 
+    //VALIDATIONS//////////////////////////////////////////
+    // const handleChange = (e) => {
+    //
+    //     const { name, value } = e.target;
+    //     this.setState({ [name]: value });
+    // }
+
+    const validateForm = () => {
+        let errors = {};
+        let formIsValid = true;
+
+        if (!name) {
+            formIsValid = false;
+            errors["name"] = "Please enter your name";
+        }
+
+        if (!email) {
+            formIsValid = false;
+            errors["email"] = "Please enter your email";
+        } else if (!/\S+@\S+\.\S+/.test(email)) {
+            formIsValid = false;
+            errors["email"] = "Please enter a valid email address";
+        }
+
+        if (!mobile) {
+            formIsValid = false;
+            errors["mobile"] = "Please enter your contact number";
+        } else if (!/^[0-9]{10}$/.test(mobile)) {
+            formIsValid = false;
+            errors["mobile"] = "Please enter a valid contact number";
+        }
+
+        // if (!password) {
+        //     formIsValid = false;
+        //     errors["password"] = "Please enter your Password";
+        // } else if (!/^(?=.\d)(?=.[a-z])(?=.[A-Z])(?=.[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?])/.test(mobile)) {
+        //     formIsValid = false;
+        //     errors["mobile"] = "Please enter a valid password";
+        // }
+
+
+        // this.setState({ errors: errors });
+        setErrors(errors);
+        return formIsValid;
+    }
+
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        if (validateForm()) {
+            onSubmit(e);
+            console.log('Form submitted successfully!');
+            // You can submit the form here or call a function to submit the form.
+        } else {
+            console.log('Form validation failed!');
+            // Display validation errors here.
+        }
+    }
+
+
 
     return (
 
@@ -44,12 +107,16 @@ function Registerpage() {
                     <span className="title"><br/>Registration</span>
 
 
-                    <form onSubmit={(e)=>onSubmit(e)}>
+                    <form onSubmit={(e)=>{
+                        // onSubmit(e);
+                        handleSubmit(e);
+                    }}>
                        
                         <div className="input-field">
                             <input type="text" placeholder="Enter your name" required name='name' 
                             value={name}
                             onChange={(e)=>onInputChange(e)}/>
+                            {errors["name"] && <span>{errors["name"]}</span>}
                             {/* <i class="uil uil-user"></i> */}
                         </div>
                         <div className="input-field">
@@ -57,6 +124,7 @@ function Registerpage() {
                             value={email}
                             
                             onChange={(e)=>onInputChange(e)} />
+                            {errors["email"] && <span>{errors["email"]}</span>}
                             {/* <i class="uil uil-envelope icon"></i> */}
                         </div>
                         <div className="input-field">
