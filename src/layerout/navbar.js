@@ -27,7 +27,7 @@ export default function
                         </a>
 
                         <Link className="nav5" to="/home_room">
-                            Booking
+
                         </Link>
 
                         <Link className="nav6" to="/home_hall">AddBooking</Link>

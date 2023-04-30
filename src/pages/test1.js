@@ -29,11 +29,11 @@ function Test1() {
         <div>
 
 
-                            <ul>
+                            <ul className={"button123"}>
                                 {users.filter(user=>user.id === userId).map(user => (
                                     <li key={user.id}>
                                         <Link to={`/viewpg/${user.id}`}>
-                                            <button>{user.id}</button>
+                                            <button className={"linkbutton2"}>View profile : ID-{user.id}</button>
                                         </Link>
                                     </li>
                                 ))}
