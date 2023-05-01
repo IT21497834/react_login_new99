@@ -33,7 +33,7 @@ export default function Editpg() {
     const onSubmit=async (e)=>{
         e.preventDefault();
         await axios.put(`http://localhost:8080/user/${id}`,user)
-        navigate("/testpg")
+        navigate("/")
     }
 
     const loadUser =async ()=>{
