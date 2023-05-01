@@ -134,7 +134,7 @@ function Viewpage() {
                     {/* <button className='btn btn-primary my-2' to={'/'}> */}
 
                     {/*<button className='buttonseperate'>*/}
-                    {/*    Back to Home*/}
+                    {/*    Back to Home1*/}
                     {/*</button>*/}
                     <br/>
 

@@ -202,8 +202,8 @@ body{
     padding-left: 25px;
     padding-right: 25px;
     background-color: white;
-    width: 300px;
-    height: 60px;
+    max-width: 300px;
+    height: 40px;
     border-radius: 6px;
     letter-spacing: 1px;
     cursor:pointer;
@@ -239,4 +239,15 @@ body{
 
 .tdedit{
     margin-left: 50px;
+}
+.bgimg{
+   background: url(visualsofdana-T5pL6ciEn-I-unsplash.jpg);
+    height: 1000px;
+    background-size: cover;
+}
+
+.title0{
+    margin-top: 50px;
+    color: white;
+    font-size: 50px;
 }

@@ -28,16 +28,24 @@ function Test1() {
 
         <div>
 
+            <ul className={"button123"}>
+                {users.filter(user=>user.id === userId).map(user => (
+                    <li key={user.id}>
+                        <Link to={`/viewpg/${user.id}`}>
+                            <button className={"linkbutton2"}>View profile : ID-{user.id}</button>
+                        </Link>
+                    </li>
+                ))}
+            </ul>
+            <div  className="bgimg">
+                <div className="title0">
+                    Welcome To Hotel Fresco
+                </div>
+            </div>
 
-                            <ul className={"button123"}>
-                                {users.filter(user=>user.id === userId).map(user => (
-                                    <li key={user.id}>
-                                        <Link to={`/viewpg/${user.id}`}>
-                                            <button className={"linkbutton2"}>View profile : ID-{user.id}</button>
-                                        </Link>
-                                    </li>
-                                ))}
-                            </ul>
+
+
+
         </div>
     );
 }

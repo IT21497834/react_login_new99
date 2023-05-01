@@ -13,7 +13,8 @@ export default function Editpg() {
         password:"",
         email:"",
         address:"",
-        mobile:""
+        mobile:"",
+
     })
 
     const{name,password,email,address,mobile}=user
@@ -121,6 +122,18 @@ export default function Editpg() {
                             /><br/>
 
                         </div>
+
+
+
+
+
+                        {/*<div>*/}
+                        {/*    <input type = "age" name="age" >*/}
+                        {/*        <select>20</select>*/}
+                        {/*        <select>21</select>*/}
+                        {/*        <select>22</select>*/}
+                        {/*    </input>*/}
+                        {/*</div>*/}
 
                         <button type='submit' className='buttonseperate'>Submit</button><br/>
                         <Link className='linkbutton' to="/"> Cancel</Link>

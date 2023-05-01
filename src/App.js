@@ -8,6 +8,8 @@ import Viewpage from './pages/viewpage';
 import Test1 from './pages/test1';
 import Editpg from "./pages/editpg";
 import Navbar from "./layerout/navbar";
+import Navbar1 from "./components/Navbar1";
+import Home1 from "./components/pages1/Home1";
 
 
 
@@ -19,11 +21,11 @@ function App(){
       <div className="App">
 
         <Router>
-            <Navbar/>
+            <Navbar1/>
           <Routes>
-
+              <Route exact path="/login" element={<Loginpage/>}/>
             <Route exact path="/register" element={<Registerpage/>}/>
-            <Route exact path="/" element={<Loginpage/>}/>
+            <Route exact path="/" element={<Home1/>}/>
 
             <Route exact path="/testpg" element={<Test1/>}/>
             <Route exact path="/viewpg/:id" element={<Viewpage/>}/>

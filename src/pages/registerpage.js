@@ -33,7 +33,7 @@ function Registerpage() {
         alert("Registration Successful")
         e.preventDefault();
         await axios.post("http://localhost:8080/user",user)
-        navigate("/")
+        navigate("/login")
     }
 
     //VALIDATIONS//////////////////////////////////////////
