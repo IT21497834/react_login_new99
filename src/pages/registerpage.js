@@ -71,9 +71,9 @@ function Registerpage() {
         // if (!password) {
         //     formIsValid = false;
         //     errors["password"] = "Please enter your Password";
-        // } else if (!/^(?=.\d)(?=.[a-z])(?=.[A-Z])(?=.[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?])/.test(mobile)) {
+        // } else if (!/^(?=.\d)(?=.[a-z])(?=.[A-Z])(?=.[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?])/.test(password)) {
         //     formIsValid = false;
-        //     errors["mobile"] = "Please enter a valid password";
+        //     errors["password"] = "Please enter a valid password";
         // }
 
 
@@ -122,10 +122,12 @@ function Registerpage() {
                         <div className="input-field">
                             <input type="text" placeholder="Enter your email" required name='email' 
                             value={email}
-                            
+
+
                             onChange={(e)=>onInputChange(e)} />
                             {errors["email"] && <span>{errors["email"]}</span>}
                             {/* <i class="uil uil-envelope icon"></i> */}
+
                         </div>
                         <div className="input-field">
                             <input type="text" placeholder="Enter your address" required name='address' 

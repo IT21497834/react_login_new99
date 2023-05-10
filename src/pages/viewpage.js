@@ -1,10 +1,12 @@
 
-import React,{useState} from 'react'
+import React, {useRef, useState} from 'react'
 import { Link } from 'react-router-dom'
  import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import {useParams} from 'react-router-dom'
 import { useEffect } from 'react'
+import QRCode from 'react-qr-code';
+
 
 function Viewpage() {
     let navigate = useNavigate()
@@ -17,6 +19,7 @@ function Viewpage() {
         password:""
 
     })
+
 
     const {id}=useParams();
 
@@ -97,37 +100,7 @@ function Viewpage() {
                             </table>
 
 
-                            {/*<ul className = 'list-group list-group-flush'>*/}
 
-                            {/*    <li className='list23'>*/}
-                            {/*        <b>Name &ensp;   : &ensp;</b>*/}
-                            {/*        {user.name}*/}
-                            {/*    </li>*/}
-
-
-                            {/*    <li className='list23'>*/}
-                            {/*        <b>Email &emsp; :&ensp;</b>*/}
-                            {/*        {user.email}*/}
-                            {/*    </li>*/}
-
-                            {/*    <li className='list23'>*/}
-                            {/*        <b>Address  &emsp; :&ensp;</b>*/}
-                            {/*        {user.address}*/}
-                            {/*    </li>*/}
-
-                            {/*    /!*<li className='list-group-item'>*!/*/}
-                            {/*    <li className='list23'>*/}
-                            {/*        <b>Mobile  &emsp; :&ensp;</b>*/}
-                            {/*        {user.mobile}*/}
-                            {/*    </li>*/}
-
-
-                            {/*    <li className='list23'>*/}
-                            {/*        <b>Password &emsp;   : &ensp; </b>*/}
-                            {/*        {user.password}*/}
-                            {/*    </li>*/}
-
-                            {/*</ul>*/}
                         </div>
                     </div>
 
@@ -143,7 +116,7 @@ function Viewpage() {
                     >Edit Profile</Link>
 
                     <Link className="linkbutton3"
-                          to={`/testpg/${user.id}`}
+                          to={`/`}
                     >Back to Home</Link><br/>
 
 
@@ -151,6 +124,43 @@ function Viewpage() {
                 </form>
 
                 </div>
+
+
+
+                    <div className='container23'>
+                        <center>
+                            <br />
+
+                            <br />
+                            <br />
+
+
+                            <div style={{marginTop :" -50px"}}>
+                                {user.name && (
+                                    <QRCode
+                                        name={user.name}
+                                        title="GeeksForGeeks"
+                                        value={user.email}
+                                        bgColor={"white"}
+                                        size={"150px"}
+
+
+                                    />
+                                )}
+                            </div>
+
+                        </center>
+
+            </div>
+
+
+
+
+
+
+
+
+
             </div>
         </div>
 

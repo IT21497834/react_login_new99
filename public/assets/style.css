@@ -191,6 +191,19 @@ body{
 
 }
 
+.container23{
+    background-color: white;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    /*margin: 0 5px;*/
+    margin-top: 60px;
+    margin-left: 130px;
+
+
+}
+
 .linkbutton2 {
     font: bold 11px Arial;
     text-decoration: none;

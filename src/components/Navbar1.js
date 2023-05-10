@@ -127,15 +127,8 @@ function Navbar1() {
               </Link>
             </li>
 
-            {/*<li className='nav-item'>*/}
-            {/*  <Link*/}
-            {/*    to='/products'*/}
-            {/*    className='nav-links'*/}
-            {/*    onClick={closeMobileMenu}*/}
-            {/*  >*/}
-            {/*    ADDITIONAL SERVICES*/}
-            {/*  </Link>*/}
-            {/*</li>*/}
+
+
 
             <li className='nav-item'>
               <Link
@@ -147,27 +140,13 @@ function Navbar1() {
               </Link>
             </li>
 
-
-            {/*className='nav-item'*/}
-            {/*<li  style={{marginLeft:'1000px',color:'black'}}>*/}
-            {/*  <Link*/}
-            {/*      to='/viewpg'*/}
-            {/*      className='nav-links'*/}
-            {/*      onClick={closeMobileMenu}*/}
-            {/*  >*/}
-            {/*    View Profile*/}
-            {/*  </Link>*/}
-            {/*</li>*/}
-
-            {/*<ul className={"button123"}>*/}
-              {users.filter(user=>user.id === userId).map(user => (
-                  <li key={user.id}>
-                    <Link to={`/viewpg/${user.id}`}>
-                      <button  style={{marginTop:'20px'}} className={"linkbutton2"}>View profile </button>
-                    </Link>
-                  </li>
-              ))}
-            {/*</ul>*/}
+            {users.filter(user=>user.id === userId).map(user => (
+                <li key={user.id}>
+                  <Link to={`/viewpg/${user.id}`}>
+                    <button  style={{marginTop:'20px'}} className={"linkbutton2"}>View profile </button>
+                  </Link>
+                </li>
+            ))}
 
 
 
